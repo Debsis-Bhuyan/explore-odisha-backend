@@ -9,10 +9,10 @@ const userSchema = new mongoose.Schema(
     image: { type: String },
     password: { type: String, select: true },
     provider: { type: String, default: "ExploreOdisha" },
+    followers: [{ type: Schema.Types.ObjectId, ref: "Followers" }],
   },
   { timestamps: true }
 );
-// followers: [{ type: Schema.Types.ObjectId, ref: "Followers" }],
 
 const Users = mongoose.model("Users", userSchema);
 
