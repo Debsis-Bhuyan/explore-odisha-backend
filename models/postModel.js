@@ -11,12 +11,9 @@ const postSchema = new mongoose.Schema(
     user: { type: Schema.Types.ObjectId, ref: "Users" },
     comments: [{ type: Schema.Types.ObjectId, ref: "Comments" }],
     status: { type: Boolean, default: true },
-    maplink:{
-      type: String
-    },
-    nearby :{type:String},
-    video:{type:String}
-    
+    maplink: { type: String },
+    nearby: { type: String },
+    video: { type: String },
   },
   { timestamps: true }
 );

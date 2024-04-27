@@ -7,7 +7,7 @@ const router = Router();
 // contact Routes
 router.post("/create-contact",  createContact);
 // Admin Routes
-router.get("/contact-data",  getAllContact);
+router.get("/contact-data",userAuth,  getAllContact);
 
 
 
